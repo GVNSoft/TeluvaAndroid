@@ -29,7 +29,6 @@ public class BaseActivity extends AppCompatActivity {
     private void setWebView(){
         mWebView = (WebView)findViewById(R.id.main_web_view);
         mWebView.setWebViewClient(new WebViewClient());
-        mWebView.loadUrl(TeluvaConstants.BASE_URL);
         mWebView.getSettings().setJavaScriptEnabled(true);
         WebSettings set = mWebView.getSettings();
         set.setJavaScriptEnabled(true); // javascript를 실행할 수 있도록 설정
@@ -37,6 +36,9 @@ public class BaseActivity extends AppCompatActivity {
         set.setPluginState(WebSettings.PluginState.ON_DEMAND); // 플러그인을 사용할 수 있도록 설정
         set.setLoadsImagesAutomatically(true); // 웹뷰가 앱에 등록되어 있는 이미지 리소스를 자동으로 로드하도록 설정
         set.setUseWideViewPort(true); // wide viewport를 사용하도록 설정
+        set.setTextZoom(100);
+
+        mWebView.loadUrl(TeluvaConstants.BASE_URL);
     }
 
 
