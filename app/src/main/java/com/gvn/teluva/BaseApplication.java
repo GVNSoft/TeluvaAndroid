@@ -11,10 +11,6 @@ public class BaseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
-        //set debug mode
-        if(BuildConfig.DEBUG){
-            EnvConfiguration.initialize(this);
-        }
+        EnvConfiguration.initialize(this);
     }
 }

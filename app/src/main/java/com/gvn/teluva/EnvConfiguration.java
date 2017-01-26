@@ -11,7 +11,6 @@ import com.squareup.leakcanary.LeakCanary;
  */
 
 public class EnvConfiguration {
-
     public static void initialize(Application application) {
         if (LeakCanary.isInAnalyzerProcess(application)) {
             return;

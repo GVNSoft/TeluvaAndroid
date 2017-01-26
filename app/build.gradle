@@ -12,6 +12,11 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+            debuggable true
+            zipAlignEnabled true
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -28,6 +33,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     //modules for debugging
-    debugCompile 'com.facebook.stetho:stetho:1.4.1'
+    debugCompile 'com.facebook.stetho:stetho:1.4.2'
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
 }
